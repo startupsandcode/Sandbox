@@ -94,5 +94,5 @@ gulp.task('watch', function() {
     gulp.watch(config.paths.less, ['less', 'css']);
 });
 
-gulp.task('default', ['html', 'js', 'less', 'css', 'images', 'lint', 'open', 'watch']);
-gulp.task('azure', ['html', 'js', 'less', 'css', 'images', 'lint']);
+gulp.task('local', ['html', 'js', 'less', 'css', 'images', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'less', 'css', 'images', 'lint']);
