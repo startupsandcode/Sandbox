@@ -95,3 +95,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['html', 'js', 'less', 'css', 'images', 'lint', 'open', 'watch']);
+gulp.task('azure', ['html', 'js', 'less', 'css', 'images', 'lint']);
