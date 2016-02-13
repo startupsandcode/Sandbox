@@ -105,8 +105,6 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   popd
 )
 
-echo "here"
-
 :: 5. Run gulp transformations
 IF EXIST "%DEPLOYMENT_TARGET%\gulpfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
@@ -146,3 +144,4 @@ exit /b 1
 :end
 endlocal
 echo Finished successfully.
+echo here
