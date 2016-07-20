@@ -11,7 +11,7 @@ var MainContent = React.createClass({
 
 	render: function() {
 		return (
-            <div className="pane image-edit-container">
+            <div className="pane edit-container">
             Hello Main Content
             </div>
 

@@ -5,13 +5,11 @@ var Header = require('./views/shared/components/header.jsx');
 var RouteHandler = require('react-router').RouteHandler;
 
 var App = React.createClass({
-	render: function() {
+	render: function () {
 		return (
-			<div>
+			<div className="topContainer">
 				<Header/>
-				<div>
-					<RouteHandler/>
-				</div>
+				<RouteHandler/>
 			</div>
 		);
 	}

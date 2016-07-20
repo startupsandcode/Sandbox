@@ -7,9 +7,26 @@ var LeftPane = React.createClass({
 		socials: React.PropTypes.array.isRequired
 	},
 
+	getInitialState: function(){
+		return {
+			'className' : 'pane side-panel show',
+			'panelOpen' : true
+		}
+	},
+
+	togglePane: function(){
+		if (this.state.panelOpen){
+			this.setState({'panelOpen' : false,'className':'hide'});
+		}else{
+			this.setState({'panelOpen' : true,'className':'show'});
+		}
+	},
+
 	render: function() {
 		return (
-            <div className="pane image-bank-container"> 
+            <div
+		 className={this.state.className + ' pane side-panel'}
+		 onClick={this.togglePane}> 
             Hello Left Pane
             </div>
 		);

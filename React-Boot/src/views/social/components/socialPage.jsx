@@ -10,31 +10,33 @@ var MainContent = require('./socialMainContent.jsx');
 var LeftPane = require('./socialLeftPane.jsx');
 
 var SocialPage = React.createClass({
-	getInitialState: function() {
+	getInitialState: function () {
 		return {
 			socials: []
 		};
 	},
 
-	componentWillMount: function() {
+	componentWillMount: function () {
 		this.socialStoreListen = SocialStore.listen(this._onChange);
 	},
 
 	//Clean up when this component is unmounted
-	componentWillUnmount: function() {
+	componentWillUnmount: function () {
 		this.socialStoreListen();
 	},
 
-	_onChange: function() {
+	_onChange: function () {
 		//this.setState({ socials: SocialStore.getAllSocials() });
 	},
 
-	render: function() {
+	render: function () {
 		return (
 			<div className="page-container">
 				<Toolbar socials={this.state.socials} />
-                <LeftPane socials={this.state.socials} />
-                <MainContent socials={this.state.socials} />
+				<div className="subContainer">
+					<LeftPane socials={this.state.socials} />
+					<MainContent socials={this.state.socials} />
+				</div>
 			</div>
 		);
 	}

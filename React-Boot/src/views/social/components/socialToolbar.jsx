@@ -10,7 +10,7 @@ var Toolbar = React.createClass({
 
 	render: function() {
 		return (
-			<div className="pane filter-container">
+			<div className="pane toolbar">
                 Hello Toolbar
 			</div>
 		);
