@@ -9,24 +9,24 @@ var LeftPane = React.createClass({
 
 	getInitialState: function(){
 		return {
-			'className' : 'pane side-panel show',
-			'panelOpen' : true
-		}
+			'className': 'pane side-panel show',
+			'panelOpen': true
+		};
 	},
 
 	togglePane: function(){
 		if (this.state.panelOpen){
-			this.setState({'panelOpen' : false,'className':'hide'});
+			this.setState({'panelOpen': false, 'className': 'hide'});
 		}else{
-			this.setState({'panelOpen' : true,'className':'show'});
+			this.setState({'panelOpen': true, 'className': 'show'});
 		}
 	},
 
 	render: function() {
 		return (
             <div
-		 className={this.state.className + ' pane side-panel'}
-		 onClick={this.togglePane}> 
+         className={this.state.className + ' pane side-panel'}
+         onClick={this.togglePane}> 
             Hello Left Pane
             </div>
 		);
